@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'itim';
+    background-color: coral;
+    color: #333;
+}
+h1{
+    text-align: center;
+    margin-top: 10%;
+}
