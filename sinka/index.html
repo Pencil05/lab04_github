@@ -3,55 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Hello pencil</title>
 </head>
 <body>
-    <div class="carousel">
-        <h1>carousel</h1>
-        <!-- Carousel slideshow code here -->
-    </div>
-    
-    <div class="product-list">
-        <!-- Product cards code here -->
-        <div class="product-card">
-            <img src="product1.jpg" alt="Product 1">
-            <h3>Product 1</h3>
-            <p>Price: $100</p>
-            <button class="order-button">Order Now</button>
-        </div>
-        <div class="product-card">
-            <img src="product1.jpg" alt="Product 2">
-            <h3>Product 2</h3>
-            <p>Price: $200</p>
-            <button class="order-button">Order Now</button>
-        </div>
-        <div class="product-card">
-            <img src="product1.jpg" alt="Product 3">
-            <h3>Product 3</h3>
-            <p>Price: $300</p>
-            <button class="order-button">Order Now</button>
-        </div>
-        <div class="product-card">
-            <img src="product1.jpg" alt="Product 4">
-            <h3>Product 4</h3>
-            <p>Price: $400</p>
-            <button class="order-button">Order Now</button>
-        </div>
-        <!-- Repeat for other products -->
-    </div>
-    
-    <br>
-    <button id="orderButton">Order Policy</button>
-    
-    <div id="orderModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Order Policy</h2>
-            <p>Details of order policy go here.</p>
-        </div>
-    </div>
+    <header>
+        <h1>Pencil Store</h1>
+    </header>
 
-    <script src="script.js"></script>
+    <main>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="product1.jpg" class="d-block w-100" alt="Product 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="product2.jpg" class="d-block w-100" alt="Product 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="product3.jpg" class="d-block w-100" alt="Product 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="product4.jpg" class="d-block w-100" alt="Product 4">
+                </div>
+            </div>
+
+        <section class="product-cards">
+            <!-- Product cards will be added dynamically using JavaScript -->
+        </section>
+
+        <div class="cart-container">
+            <h3>ตะกร้าสินค้า</h3>
+            <ul class="cart-items">
+                <!-- Cart items will be added dynamically using JavaScript -->
+            </ul>
+            <p>Total: <span id="total-price">$0.00</span></p>
+            <button class="checkout-button" data-toggle="modal" data-target="#orderModal">Cancle</button>
+            <button class="confirm-order-button">Confirm Order</button>
+        </div>
+    </main>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul id="orderDetails">
+                        <!-- Order details will be displayed here -->
+                    </ul>
+                    <p id="totalPriceModal">Total: $0.00</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

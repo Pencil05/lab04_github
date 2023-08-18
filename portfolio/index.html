@@ -3,22 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">
+            <b><a href="#">Logo</a></b>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100063508103071&mibextid=LQQJ4d">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
     <header>
+        <h3>welcome to...</h3>
         <h1>My Portfolio</h1>
+        <h3 class="mju">I'm MJU universal student</h3>
+
+        <button><a href="https://www.facebook.com/profile.php?id=100063508103071&mibextid=LQQJ4d"><b>Contact Me!</b></a></button>
     </header>
-    
     <main>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
         <section class="chart-section">
-            <h2>Skills Chart</h2>
-            <canvas id="skillsChart"></canvas>
+            <h2>My Programing Skills</h2>
+            <div class="chart-container">
+                <canvas id="skillsChart"></canvas>
+            </div>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2023 My Portfolio</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Chart.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

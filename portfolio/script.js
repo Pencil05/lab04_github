@@ -1,20 +1,28 @@
-// Define chart data
-const skillsLabels = ["HTML", "CSS", "JavaScript", "Python", "SQL"];
-const skillsData = [80, 80, 40, 70, 10];
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
 
-// Create and configure chart
-const skillsChart = new Chart(document.getElementById("skillsChart"), {
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+
+// Skills chart data
+const skillsData = {
+    labels: ["HTML", "CSS", "JavaScript", "Python", "SQL"],
+    datasets: [{
+        label: "Skills",
+        data: [80, 65, 30, 70, 5], // Skill levels (out of 100)
+        backgroundColor: "rgba(52, 152, 219, 0.5)", // Chart color
+        borderColor: "rgba(52, 152, 219, 1)",
+        borderWidth: 1
+    }]
+};
+
+// Create skills chart
+const skillsChartCanvas = document.getElementById("skillsChart");
+const skillsChart = new Chart(skillsChartCanvas, {
     type: "bar",
-    data: {
-        labels: skillsLabels,
-        datasets: [{
-            label: "Skill Level",
-            data: skillsData,
-            backgroundColor: "rgba(75, 192, 192, 0.6)",
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderWidth: 1
-        }]
-    },
+    data: skillsData,
     options: {
         scales: {
             y: {
