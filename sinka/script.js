@@ -5,6 +5,10 @@ const products = [
     { name: "ดินสอกด0.5มม.", price: 120 },
 ];
 
+const detail = ["ดินสอไม้6B นำเข้าโดยตรงจากแอฟริกา กันน้ำได้" , "ดินสอกดขนาด2B รองรับไส้ดินสอทุกขนาด เปลี่ยนรูปร่างได้เมื่อโดนความร้อน",
+"ดินสอไม้HB เข้มยิ่งกว่าหลุมดำ ทำจากไม้คุณภาพในฮ่องกง","ดินสอกดรองรับไส้ขนาด0.5มิลลิเมตร ทนต่อแรงกระแทกดีที่สุด"
+];
+
 const productCards = document.querySelector(".product-cards");
 const cartItemsList = document.querySelector(".cart-items");
 const totalPriceDisplay = document.getElementById("total-price");
@@ -18,6 +22,7 @@ products.forEach((product, index) => {
     productCard.innerHTML = `
         <img src="product${index + 1}.jpg" alt="${product.name}">
         <h3>${product.name}</h3>
+        <p>${detail[index]}</p>
         <p>Price: $${product.price}</p>
         <button class="add-to-cart btn btn-primary" data-index="${index}">Add to Cart</button>
     `;
